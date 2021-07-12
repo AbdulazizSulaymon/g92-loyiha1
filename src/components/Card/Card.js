@@ -1,7 +1,5 @@
 import "./Card.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobe } from "@fortawesome/free-solid-svg-icons";
-
 
 function Card(props) {
     const state = props;

@@ -4,6 +4,7 @@ import Card from '../Card/Card';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { faGlide } from '@fortawesome/free-brands-svg-icons';
 import Header from '../Header/Header';
+import Counter from "../Counter"
 
 const data = [
   {
@@ -18,6 +19,8 @@ function App() {
   return (
     <div className="App">
       <Header />
+
+      {/* Cards */}
       <div className="container py-3">
         <div className="row justify-content-center">
           {
@@ -29,6 +32,14 @@ function App() {
           }
         </div>
       </div>
+
+      {/* Counter */}
+      <div className="container py-5">
+        <Counter startValue={10} />
+        <Counter startValue={5} />
+        <Counter startValue={25} />
+      </div>
+
     </div>
   );
 }
