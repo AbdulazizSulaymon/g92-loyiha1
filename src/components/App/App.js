@@ -5,18 +5,28 @@ import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { faGlide } from '@fortawesome/free-brands-svg-icons';
 import Header from '../Header/Header';
 
+const data = [
+  {
+    title: "Blue Ocean Waves Crash", icon: faGlobe
+  },
+  {
+    title: "Waves Crash in Blue Ocean", icon: faGlide
+  },
+]
+
 function App() {
   return (
     <div className="App">
       <Header />
       <div className="container py-3">
         <div className="row justify-content-center">
-          <div className="col-md-6 col-lg-4 mb-4">
-            <Card title="Blue Ocean Waves Crash" icon={faGlobe} />
-          </div>
-          <div className="col-md-6 col-lg-4 mb-4">
-            <Card title="Waves Crash in Blue Ocean" icon={faGlide} />
-          </div>
+          {
+            data.map((value, index) => {
+              return <div className="col-md-6 col-lg-4 mb-4">
+                <Card title={value.title} icon={value.icon} />
+              </div>
+            })
+          }
         </div>
       </div>
     </div>
