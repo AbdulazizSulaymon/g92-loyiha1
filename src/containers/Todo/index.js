@@ -11,12 +11,28 @@ let jcBetween = {
     justifyContent: "space-between"
 }
 
+let data = [
+    {
+        text: "Cras justo odio",
+        completed: false
+    },
+    {
+        text: "Dapibus ac facilisis in",
+        completed: true
+    },
+    {
+        text: "Morbi leo risus",
+        completed: false
+    },
+]
+
+
 class Todo extends Component {
     constructor(props) {
         super(props);
         console.log(props);
 
-        this.state = { tasks: props.tasks, typing: "" }
+        this.state = { tasks: data, typing: "" }
     }
 
     typing = (event) => {
@@ -33,12 +49,10 @@ class Todo extends Component {
 
     add = () => {
         this.setState((state) => {
-            let newTasks = [...state.tasks];
-
-            newTasks.push({
+            let newTasks = [...state.tasks, {
                 text: state.typing,
                 completed: false
-            })
+            }];
 
             return { tasks: newTasks, typing: "" }
         })
