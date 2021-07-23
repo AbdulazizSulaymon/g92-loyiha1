@@ -1,0 +1,19 @@
+.loadingContainer {
+  max-width: 500px;
+  height: 60px;
+  border-radius: 30px;
+  border: 3px solid white;
+  position: relative;
+  overflow: hidden;
+}
+
+.loading {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
