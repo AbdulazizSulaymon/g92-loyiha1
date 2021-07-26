@@ -7,6 +7,7 @@ import Clock from '../Clock';
 import { Button } from 'reactstrap';
 import Loading from '../Loading';
 import ClockWithHook from '../../components/ClockWithHook/ClockWithHook';
+import LoadingWithHook from "../../components/LoadingWithHook"
 
 class App extends React.Component {
   constructor(props) {
@@ -33,6 +34,7 @@ class App extends React.Component {
 
               {/* function components */}
               <ClockWithHook text={"Clock"} />
+              <LoadingWithHook />
             </div>
           </div>
         </div>

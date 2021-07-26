@@ -27,7 +27,7 @@ const ClockWithHook = (props) => {
     const second = time.getSeconds();
 
     useEffect(() => {
-        setTimeout(() => { setTime(new Date()) }, 1000)
+        setTimeout(() => { setTime(new Date()) }, 1000);
     }, [time])
 
     return <div>
