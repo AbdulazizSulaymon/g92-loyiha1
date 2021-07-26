@@ -6,6 +6,7 @@ import Calc from '../Calc';
 import Clock from '../Clock';
 import { Button } from 'reactstrap';
 import Loading from '../Loading';
+import ClockWithHook from '../../components/ClockWithHook/ClockWithHook';
 
 class App extends React.Component {
   constructor(props) {
@@ -26,9 +27,12 @@ class App extends React.Component {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-sm-10 col-md-8 col-lg-6 py-5 text-center">
-              <Button onClick={this.toogle}>{this.state.show && "Hide" || "Show"}</Button>
+              {/* <Button onClick={this.toogle}>{this.state.show && "Hide" || "Show"}</Button>
               {this.state.show && <Clock /> || ""}
-              <Loading></Loading>
+              <Loading></Loading> */}
+
+              {/* function components */}
+              <ClockWithHook text={"Clock"} />
             </div>
           </div>
         </div>
